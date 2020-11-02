@@ -1,0 +1,23 @@
+{
+    "name": "kevinwan/aliyunlog",
+    "description": "阿里云日志集成",
+    "keywords": [  
+            "aliyun",
+            "log"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability":"stable",
+    "authors": [
+        {
+            "name": "wizardchao",
+            "email": "18317119662@139.com"
+        }
+    ],
+    "require": {},
+    "autoload": {  
+    "psr-4": {
+      "kevinwan\\aliyunlog\\": "src/kevinwan/aliyunlog"
+    }
+  }
+}
