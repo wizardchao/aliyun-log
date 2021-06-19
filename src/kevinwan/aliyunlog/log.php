@@ -40,7 +40,7 @@ class log {
 	 * @return int
 	 * @throws \Aliyun_Log_Exception
 	 */
-	public function write($param) {
+	public function write($param,$flag=FALSE) {
 		if (!is_array($param) || empty($param)) {
 			return 0;
 		}
@@ -50,8 +50,9 @@ class log {
 			if (!$item) {
 				continue;
 			}
-
-			$list[$key] = is_array($item) ? json_encode($item) : $item;
+			
+		$list[$key] = is_array($item) ? ($flag == 'TRUE' ? json_encode($item, JSON_UNESCAPED_UNICODE) : json_encode($item)) : $item;
+			//$list[$key] = is_array($item) ? json_encode($item) : $item;
 		}
 
 //        $topic = "";
